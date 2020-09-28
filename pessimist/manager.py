@@ -182,7 +182,7 @@ class Manager:
                 check_call([sys.executable, "-m", "venv", d])
 
                 env = os.environ.copy()
-                env["PATH"] = f"{d}/bin:{env['PATH']}"
+                env["PATH"] = f"{d}/bin:{d}/scripts:{env['PATH']}"
                 env["COVERAGE_FILE"] = f"{d}/.coverage"
 
                 while True:
