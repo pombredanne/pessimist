@@ -265,8 +265,8 @@ class Manager:
             outstanding -= 1
             if result.exception:
                 print(f"FAIL {result.item.title}: {result.exception}")
-                # for line in result.output.splitlines():
-                #     print(f"  {line}")
+                for line in result.output.splitlines():
+                    print(f"  {line}")
 
                 if (
                     result.item.name is not None
